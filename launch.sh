@@ -422,6 +422,13 @@ main() {
 		export PLATFORM="tg5040"
 	fi
 
+
+	#nasty hack - see if it runs
+	if [ "$PLATFORM" = "h700" ]; then
+		export PLATFORM="tg5040"
+	fi
+
+
 	if [ "$PLATFORM" != "tg5040" ]; then
 		show_message "$PLATFORM is not a supported platform" 2
 		exit 1
